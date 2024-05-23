@@ -12,11 +12,11 @@ export PATH=$PATH:/usr/local/go/bin
 go version
 
 # Install xcaddy
-apt install -y debian-keyring debian-archive-keyring apt-transport-https
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/xcaddy/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-xcaddy-archive-keyring.gpg
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/xcaddy/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-xcaddy.list
-apt update
-apt install xcaddy
+sudo apt update
+sudo apt install xcaddy
 
 # get latest caddy main.go file
 wget https://raw.githubusercontent.com/caddyserver/caddy/master/cmd/caddy/main.go
