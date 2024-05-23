@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 
 # install go1.22.3
 wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz
@@ -26,6 +27,3 @@ sed -i '/_ "github.com\/caddyserver\/caddy\/v2\/modules\/standard"/a\ \t_ "githu
 
 # build caddy
 xcaddy build
-
-# show directory contents
-ls -lsa

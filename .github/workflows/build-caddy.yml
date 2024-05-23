@@ -19,3 +19,9 @@ jobs:
         run: |
           chmod +x ./build.sh
           ./build.sh
+
+      - name: Upload Caddy binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: caddy-binary
+          path: ./caddy
