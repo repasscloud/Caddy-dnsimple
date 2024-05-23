@@ -23,3 +23,6 @@ wget https://raw.githubusercontent.com/caddyserver/caddy/master/cmd/caddy/main.g
 
 # add dnsimple plugin
 sed -i '/_ "github.com\/caddyserver\/caddy\/v2\/modules\/standard"/a\ \t_ "github.com/caddy-dns/dnsimple"' main.go
+
+# show me the contents
+cat main.go
